@@ -18,3 +18,9 @@ serverless deploy
 
 ## DB
 - MongoDB
+
+## API endpoint
+- **[GET]** dailyMovies
+    - [parameter] dt (No required) #YYYYMMDD 형식
+- **[GET]** weeklyMovies
+    - [parameter] dt (No required) #YYYYMMDD 형식
