@@ -30,6 +30,12 @@ def get_daily_movies(event, context): # 일별 랭킹 box office 가져오기
     res = collection.find_one({'datetime': dt},{"_id":0, "datetime":0})
     response = {
         "statusCode": 200,
+        "headers": {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Credentials": True
+
+            },
         "body": json.dumps(res)
     }
     return response
@@ -47,6 +53,12 @@ def get_weekly_movies(event, context):
 
     response = {
         "statusCode": 200,
+        "headers": {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                "Access-Control-Allow-Credentials": True
+
+            },
         "body": json.dumps(res)
     }
 
